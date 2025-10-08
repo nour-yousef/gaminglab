@@ -1,100 +1,61 @@
-/* ===== Base ===== */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+body {
+  box-sizing: border-box; /* changes box model to exclude padding/border from width calc */
+  background-image: url(ai-generated-8941651.jpg); /* sets page background image */
+  background-size: cover; /* makes image fill entire screen */
+  background-repeat: no-repeat; /* prevents image from repeating */
+  background-position: center; /* centers image */
+  color: azure; /* default text color */
+  margin: 0; /* removes outer spacing */
+  padding: 0; /* removes inner spacing */
+  font-family: Arial, sans-serif; /* sets main font */ /* includes padding/border in width calc */
+  text-align: center; /* centers inline content (like h1) */
 }
 html,
 body {
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
 }
-body {
-  background-image: url(ai-generated-8941651.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: azure;
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
-
-/* Headings */
 h1 {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(239, 231, 231);
-  border-radius: 5px;
-  padding: 5px 5px;
-  font-size: clamp(2rem, 6vw, 100px); /* scales on mobile */
-  font-family: "Gill Sans", Calibri, "Trebuchet MS", sans-serif;
-  text-shadow: 2px 2px 4px #000;
-  margin-top: 20px;
+  display: inline-flex; /* allows flex properties & keeps box tight */
+  justify-content: center; /* centers text horizontally */
+  align-items: center; /* centers text vertically */
+  color: rgb(239, 231, 231); /* light text color */
+  border-radius: 5px; /* slightly rounded corners */
+  padding: 5px 5px; /* inner spacing around text */
+  font-size: 100px; /* very large title text */
+  font-family: "Gill Sans", Calibri, "Trebuchet MS", sans-serif; /* decorative font */
+  text-shadow: 2px 2px 4px #000000; /* dark shadow under text */
+  margin-top: 20px; /* spacing from top */
 }
-
-/* Container (id or class, both covered) */
-#container,
 .container {
-  width: min(92%, 1200px);
-  margin: 0 auto;
-  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7); /* dark transparent background */
+  padding: 10px; /* space inside container */
+  display: flex; /* flex layout for content */
+  justify-content: center; /* centers child items horizontally */
+  gap: 20px; /* spacing between child items */
+  width: 90%;
+  max-width: 1200px; /* limits container width */
 }
-
-/* Nav */
 nav {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin: 20px 0;
-  flex-wrap: wrap;
-  padding: 10px;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 26px;
+  display: flex; /* arranges nav links horizontally */
+  gap: 20px; /* space between links */
+  justify-content: center; /* centers the nav links */
+  margin: 20px 0; /* spacing above/below nav bar */
+  flex-wrap: wrap; /* allows nav links to wrap to next line if needed */
+  padding: 10px; /* inner spacing */
+  border-radius: 10px; /* rounded corners */
+  color: rgb(255, 255, 255); /* link text color */
+  font-size: 26px; /* font size for links */
 }
-.nav {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-  flex-wrap: wrap;
+aside h2 {
+  font-size: 28px; /* heading size in Contact section */
+  margin-top: 20px; /* space above heading */
 }
-#navbar {
-  display: flex;
-  gap: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* fixed invalid value */
-}
-nav a,
-#navbar a {
-  color: #fff;
-  background-color: rgba(97, 96, 96, 0.6);
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-size: 22px;
-  text-decoration: none;
-  transition: background 0.3s, color 0.3s;
-  display: inline-block;
-}
-nav a:hover,
-#navbar a:hover {
-  background-color: #0fc;
-  color: #000;
-}
-
-/* Images */
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 100%; /* prevents image from exceeding container width */
+  height: auto; /* maintains aspect ratio */
+  border-radius: 10px; /* rounded corners for images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* subtle shadow around images */
 }
-
-/* Sections */
 #section1,
 #section2,
 #section3 {
@@ -104,98 +65,121 @@ img {
   border: 5px solid rgb(135, 172, 162);
   background-color: rgba(120, 117, 117, 0.85);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  width: min(90%, 900px);
+  width: min(80%, 900px);
   text-align: center;
 }
-
-/* Lists */
 ul {
   display: inline-block;
-  list-style: circle;
-  padding-left: 20px;
-  text-align: left;
-  font-size: 18px;
-  line-height: 1.6;
+  list-style-type: circle; /* bullet points */
+  padding-left: 20px; /* space from left edge */
+  text-align: left; /* left-aligns list text */
+  font-size: 18px; /* list text size */
+  line-height: 1.6; /* space between lines */
 }
-
-/* Aside (contact) */
 aside {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 5px solid rgb(135, 172, 162);
-  border-radius: 15px;
-  padding: 30px;
-  margin: 40px auto;
-  background-color: rgba(43, 42, 42, 0.85);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  width: 100%;
-  max-width: 600px; /* fluid on mobile */
+  display: flex; /* flex layout for contact info */
+  flex-direction: column; /* stack items vertically */
+  justify-content: center; /* center vertically */
+  align-items: center; /* center horizontally */
+  border: 5px solid rgb(135, 172, 162); /* border color */
+  border-radius: 15px; /* rounded corners */
+  padding: 30px; /* space inside box */
+  margin: 40px auto; /* centered with top/bottom space */
+  background-color: rgba(43, 42, 42, 0.85); /* darker box for contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* soft shadow */
+  width: fit-content; /* adjust width to fit text */
 }
-aside h2 {
-  font-size: 28px;
-  margin-top: 20px;
+nav a {
+  color: white; /* link text color */
+  background-color: rgba(97, 96, 96, 0.6); /* dark grey behind each link */
+  padding: 8px 16px; /* inner padding for button-like look */
+  margin: 0 10px; /* spacing between links */
+  border-radius: 8px; /* rounded corners */
+  font-size: 22px; /* link text size */
+  text-decoration: none; /* removes underline */
+  display: inline-block; /* allows padding and margin */
+  transition: background 0.3s, color 0.3s; /* smooth hover effect (fixed typo) */
 }
-
-/* Buttons */
+nav a:hover {
+  background-color: #00ffcc; /* neon color when hovered */
+  color: black; /* changes text color on hover */
+}
 button {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 8px 16px;
-  margin: 0 10px;
-  border-radius: 8px;
-  font-size: 14px;
-  text-decoration: none;
-  display: inline-flex;
-  transition: background 0.3s, color 0.3s;
+  color: white; /* button text color */
+  background-color: rgba(0, 0, 0, 0.6); /* button background */
+  padding: 8px 16px; /* inner spacing */
+  margin: 0 10px; /* space between buttons */
+  border-radius: 8px; /* rounded edges */
+  font-size: 14px; /* text size */
+  text-decoration: none; /* removes underline */
+  display: inline-flex; /* keeps buttons neat */
+  text-align: right;
+  transition: background 0.3s, color 0.3s; /* smooth hover animation */
+}
+#section2 ul li {
+  display: flex;
+  justify-content: space-between; /* space between text and button */
+  align-items: center;
+  width: 100%;
 }
 button:hover {
-  background-color: #0fc;
-  color: #000;
+  background-color: #00ffcc; /* neon color on hover */
+  color: black; /* text color change on hover */
 }
-
-/* ===== Breakpoints ===== */
+.nav {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap; /* allows nav links to wrap to next line if needed */
+}
+#navbar {
+  display: flex;
+  gap: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 3 4px 8px rgba(0, 0, 0, 0.9);
+}
+#navbar a {
+  color: white;
+  background-color: rgba(97, 96, 96, 0.6);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 22px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+#navbar a:hover {
+  background-color: #00ffcc;
+  color: black;
+}
+#container {
+  width: 90%; /* fills most of the screen */
+  max-width: 1200px; /* stops stretching too wide */
+  margin: 0 auto; /* centers horizontally */
+  padding: 2rem; /* consistent inner spacing */
+} /* Responsive adjustment for smaller screens */
 @media (max-width: 1200px) {
-  #container,
-  .container {
+  #container {
     width: 95%;
     padding: 1.5rem;
   }
-}
-
-@media (max-width: 900px) {
-  /* optional: visual check while debugging */
-  /* body{background:lightblue} */
-}
-
+} /* Further adjustment for mobile devices */
 @media (max-width: 768px) {
-  #container,
-  .container {
+  #container {
     width: 100%;
     padding: 1rem;
   }
-
-  /* mobile nav/text rules must live inside the query */
-  .nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .text {
-    font-size: 14px;
-  }
-
-  nav a,
-  #navbar a,
-  button {
-    font-size: 16px;
-    padding: 10px 14px;
-    width: 100%;
-  }
-  #section1,
-  #section2,
-  #section3 {
-    width: 100%;
-    margin: 2rem 0;
+}
+.nav {
+  flex-direction: column; /* stack nav links vertically */
+  gap: 10px; /* reduce gap for vertical layout */
+}
+.text {
+  font-size: 14px; /* smaller text for mobile */
+}
+@media (max-width: 900px) {
+  body {
+    background: lightblue;
   }
 }
