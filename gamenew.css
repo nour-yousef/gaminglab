@@ -34,6 +34,8 @@ h1 {
   display: flex; /* flex layout for content */
   justify-content: center; /* centers child items horizontally */
   gap: 20px; /* spacing between child items */
+  width: 90%;
+  max-width: 1200px;
   /* limits container width */
 }
 
