@@ -5,7 +5,6 @@ A simple HTML and CSS project built to practice basic layout, images, and stylin
 ## Features
 
 - Static web page using HTML5 and CSS3
-- Includes custom images and responsive layout (if you added any)
 - Designed for learning front-end fundamentals
 
 ## Files
