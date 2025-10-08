@@ -199,6 +199,12 @@ button:hover {
     }
   }
 }
+
+@media (max-width: 900px) {
+  body {
+    background: lightblue;
+  }
+}
 /*html {
   font-size: 62.5%; /* sets base font size to 10px (62.5% of 16px) for easier rem calculations */
 /*for text sizing using rem units*/
