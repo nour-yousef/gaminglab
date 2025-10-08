@@ -22,21 +22,12 @@ h1 {
   color: rgb(239, 231, 231); /* light text color */
   border-radius: 5px; /* slightly rounded corners */
   padding: 5px 5px; /* inner spacing around text */
-  font-size: 100px; /* very large title text */
+  h1 {
+    font-size: clamp(2rem, 6vw, 100px);
+  }
   font-family: "Gill Sans", Calibri, "Trebuchet MS", sans-serif; /* decorative font */
   text-shadow: 2px 2px 4px #000000; /* dark shadow under text */
   margin-top: 20px; /* spacing from top */
-}
-
-.container {
-  background-color: rgba(0, 0, 0, 0.7); /* dark transparent background */
-  padding: 10px; /* space inside container */
-  display: flex; /* flex layout for content */
-  justify-content: center; /* centers child items horizontally */
-  gap: 20px; /* spacing between child items */
-  width: 90%;
-  max-width: 1200px;
-  /* limits container width */
 }
 
 nav {
@@ -57,7 +48,12 @@ aside h2 {
 }
 
 img {
-  max-width: 100%; /* prevents image from exceeding container width */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
   height: auto; /* maintains aspect ratio */
   border-radius: 10px; /* rounded corners for images */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* subtle shadow around images */
@@ -145,6 +141,7 @@ button:hover {
   display: flex;
   justify-content: center;
   margin: 20px 0;
+  flex-wrap: wrap; /* allows nav links to wrap to next line if needed */
 }
 
 #navbar {
@@ -172,7 +169,12 @@ button:hover {
 }
 
 #container {
-  width: 90%; /* fills most of the screen */
+  #container {
+    width: min(92%, 1200px);
+    margin: 0 auto;
+    padding: 2rem;
+  } /* main content area */
+  width: 92%; /* responsive width */
   max-width: 1200px; /* stops stretching too wide */
   margin: 0 auto; /* centers horizontally */
   padding: 2rem; /* consistent inner spacing */
@@ -183,6 +185,13 @@ button:hover {
   #container {
     width: 95%;
     padding: 1.5rem;
+    .nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .text {
+      font-size: 14px;
+    }
   }
 }
 /* Further adjustment for mobile devices */
@@ -190,6 +199,13 @@ button:hover {
   #container {
     width: 100%;
     padding: 1rem;
+    .nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .text {
+      font-size: 14px;
+    }
   }
 }
 
