@@ -190,14 +190,15 @@ button:hover {
   #container {
     width: 100%;
     padding: 1rem;
-    .nav {
-      flex-direction: column; /* stack nav links vertically */
-      gap: 10px; /* reduce gap for vertical layout */
-    }
-    .text {
-      font-size: 14px; /* smaller text for mobile */
-    }
   }
+}
+
+.nav {
+  flex-direction: column; /* stack nav links vertically */
+  gap: 10px; /* reduce gap for vertical layout */
+}
+.text {
+  font-size: 14px; /* smaller text for mobile */
 }
 
 @media (max-width: 900px) {
