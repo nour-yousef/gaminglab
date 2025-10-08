@@ -185,27 +185,28 @@ button:hover {
   #container {
     width: 95%;
     padding: 1.5rem;
-    .nav {
-      flex-direction: column;
-      gap: 10px;
-    }
-    .text {
-      font-size: 14px;
-    }
+  }
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .text {
+    font-size: 14px;
   }
 }
+
 /* Further adjustment for mobile devices */
 @media (max-width: 768px) {
   #container {
     width: 100%;
     padding: 1rem;
-    .nav {
-      flex-direction: column;
-      gap: 10px;
-    }
-    .text {
-      font-size: 14px;
-    }
+  }
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .text {
+    font-size: 14px;
   }
 }
 
@@ -217,11 +218,6 @@ button:hover {
   font-size: 14px; /* smaller text for mobile */
 }
 
-@media (max-width: 900px) {
-  body {
-    background: lightblue;
-  }
-}
 /*html {
   font-size: 62.5%; /* sets base font size to 10px (62.5% of 16px) for easier rem calculations */
 /*for text sizing using rem units*/
